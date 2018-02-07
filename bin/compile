@@ -200,7 +200,7 @@ mtime "pip.uninstall.time" "${start}"
 # Install dependencies with Pip (where the magic happens).
 let start=$(nowms)
 # shellcheck source=bin/steps/pip-install
-source "$BIN_DIR/steps/pip-install"
+source "$BIN_DIR/steps/pip-install" "$ENV_DIR"
 mtime "pip.install.time" "${start}"
 
 # Support for NLTK corpora.
